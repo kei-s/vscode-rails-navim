@@ -14,8 +14,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "rails-navigation.openSpecFile",
-        "title": "Open Spec File"
+        "command": "rails-navigation.openAlternateFile",
+        "title": "Open Alternate File"
+      },
+      {
+        "command": "rails-navigation.openRelatedFile",
+        "title": "Open Related File"
       }
     ]
   },
