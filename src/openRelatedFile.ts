@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
-import { getMethodName } from './util';
+import { getPositionedMethodName } from './util';
 
 export async function openRelatedFile() {
     const workspace = vscode.workspace.workspaceFolders;
@@ -19,7 +19,7 @@ export async function openRelatedFile() {
 
     const relativePath = path.relative(workspaceRoot, document.fileName);
     if (relativePath.match(/^app\/controllers/)) {
-        const actionName = getMethodName(document, editor.selection.active);
+        const actionName = getPositionedMethodName(document, editor.selection.active);
         if (!actionName) {
             return;
         }

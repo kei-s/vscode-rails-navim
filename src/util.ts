@@ -12,7 +12,7 @@ export async function showOrQuickOpen(workspaceRoot: string, candidate: string) 
 	}
 }
 
-export function getMethodName(document: vscode.TextDocument, position: vscode.Position): string | null {
+export function getPositionedMethodName(document: vscode.TextDocument, position: vscode.Position): string | null {
 	const methodDefinitionRegex = /^\s*def\s+([a-zA-Z_][a-zA-Z0-9_]*(\?|!)?)/;
 	for (let line = position.line; line >= 0; line--) {
 		const lineText = document.lineAt(line).text;
