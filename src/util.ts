@@ -2,6 +2,25 @@ import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 
+
+export class EditorInfoError extends Error { }
+
+export function getEditorInfo() {
+	const workspace = vscode.workspace.workspaceFolders;
+	if (!workspace) {
+		throw new EditorInfoError('No workspace found.');
+	}
+	const workspaceRoot = workspace![0].uri.fsPath;
+	const editor = vscode.window.activeTextEditor;
+	if (!editor) {
+		throw new EditorInfoError('No active editor found.');
+	}
+	const document = editor.document;
+	const relativePath = path.relative(workspaceRoot, document.fileName);
+
+	return { workspace, workspaceRoot, editor, document, relativePath };
+}
+
 export async function showOrQuickOpen(workspaceRoot: string, candidate: string) {
 	const absolutePath = path.join(workspaceRoot, candidate);
 	if (fs.existsSync(absolutePath)) {
