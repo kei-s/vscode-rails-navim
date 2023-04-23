@@ -26,6 +26,7 @@ export async function openRelatedFile() {
         const candidate = relativePath.replace(/^app\/controllers/, 'app/views').replace(/\_controller.rb$/, `/${actionName}`);
         const dirPath = path.dirname(path.join(workspaceRoot, candidate));
         if (fs.existsSync(dirPath) && fs.lstatSync(dirPath).isDirectory()) {
+            // TODO: 複数ある場合は候補を出す
             const matchingFile = fs.readdirSync(dirPath).find(file => file.startsWith(actionName));
             if (matchingFile) {
                 const openingDocument = await vscode.workspace.openTextDocument(vscode.Uri.file(path.join(dirPath, matchingFile)));
@@ -60,5 +61,4 @@ export async function openRelatedFile() {
             return;
         }
     }
-
 }
