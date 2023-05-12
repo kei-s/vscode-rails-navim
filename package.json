@@ -3,6 +3,7 @@
   "displayName": "Rails Navigation",
   "description": "",
   "version": "0.0.1",
+  "publisher": "kei-s",
   "engines": {
     "vscode": "^1.77.0"
   },
