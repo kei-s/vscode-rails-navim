@@ -1,5 +1,4 @@
 import * as vscode from 'vscode';
-import * as path from 'path';
 import { showOrQuickOpen, getEditorInfo, EditorInfoError } from './util';
 
 export async function openAlternateFile() {
