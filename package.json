@@ -4,6 +4,10 @@
   "description": "",
   "version": "0.0.1",
   "publisher": "kei-s",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kei-s/vscode-rails-navigation.git"
+  },
   "engines": {
     "vscode": "^1.77.0"
   },
