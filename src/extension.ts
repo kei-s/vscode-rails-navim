@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 import { openAlternateFile } from './openAlternateFile';
 import { openRelatedFile } from './openRelatedFile';
+import { goToFile } from './goToFile';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -13,6 +14,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand('rails-navigation.openRelatedFile', openRelatedFile)
+	);
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand('rails-navigation.goToFile', goToFile)
 	);
 }
 

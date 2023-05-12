@@ -20,6 +20,10 @@
       {
         "command": "rails-navigation.openRelatedFile",
         "title": "Open Related File"
+      },
+      {
+        "command": "rails-navigation.goToFile",
+        "title": "Go to cursored file"
       }
     ]
   },
