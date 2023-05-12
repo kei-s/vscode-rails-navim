@@ -1,33 +1,36 @@
 {
-  "name": "rails-navigation",
-  "displayName": "Rails Navigation",
-  "description": "",
+  "name": "rails-navim",
+  "displayName": "Rails NaVim",
+  "description": "Rails file navigation like vim-rails",
   "version": "0.0.1",
   "publisher": "kei-s",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kei-s/vscode-rails-navigation.git"
+    "url": "https://github.com/kei-s/vscode-rails-navim.git"
   },
   "engines": {
     "vscode": "^1.77.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages"
+  ],
+  "keywords": [
+    "rails"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "rails-navigation.openAlternateFile",
+        "command": "rails-navim.openAlternateFile",
         "title": "Rails Nav: Open Alternate File"
       },
       {
-        "command": "rails-navigation.openRelatedFile",
+        "command": "rails-navim.openRelatedFile",
         "title": "Rails Nav: Open Related File"
       },
       {
-        "command": "rails-navigation.goToFile",
+        "command": "rails-navim.goToFile",
         "title": "Rails Nav: Go to cursored file"
       }
     ]

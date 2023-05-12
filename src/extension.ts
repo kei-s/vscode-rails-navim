@@ -9,15 +9,15 @@ import { goToFile } from './goToFile';
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
-		vscode.commands.registerCommand('rails-navigation.openAlternateFile', openAlternateFile)
+		vscode.commands.registerCommand('rails-navim.openAlternateFile', openAlternateFile)
 	);
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand('rails-navigation.openRelatedFile', openRelatedFile)
+		vscode.commands.registerCommand('rails-navim.openRelatedFile', openRelatedFile)
 	);
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand('rails-navigation.goToFile', goToFile)
+		vscode.commands.registerCommand('rails-navim.goToFile', goToFile)
 	);
 }
 

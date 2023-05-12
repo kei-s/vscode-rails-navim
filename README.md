@@ -1,6 +1,6 @@
-# VSCode Rails Navigation
+# VSCode Rails NaVim
 
-VSCode extension for Rails file navigation.
+VSCode extension for Rails file navigation like vim-rails.
 It is heavily inspired by [tpope/vim-rails](https://github.com/tpope/vim-rails).
 
 *For now, it supports only some features from vim-rails.*
@@ -43,15 +43,15 @@ If you want to integrate with VSCodeVim, put `settings.json` like below.
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [ "<leader>", "A" ],
-            "commands": [ "rails-navigation.openAlternateFile" ]
+            "commands": [ "rails-navim.openAlternateFile" ]
         },
         {
             "before": [ "<leader>", "R" ],
-            "commands": [ "rails-navigation.openRelatedFile" ]
+            "commands": [ "rails-navim.openRelatedFile" ]
         }
         {
             "before": [ "<leader>", "g", "f" ],
-            "commands": [ "rails-navigation.goToFile" ]
+            "commands": [ "rails-navim.goToFile" ]
         }
     ]
 ```
