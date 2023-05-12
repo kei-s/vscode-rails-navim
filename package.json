@@ -15,15 +15,15 @@
     "commands": [
       {
         "command": "rails-navigation.openAlternateFile",
-        "title": "Open Alternate File"
+        "title": "Rails Nav: Open Alternate File"
       },
       {
         "command": "rails-navigation.openRelatedFile",
-        "title": "Open Related File"
+        "title": "Rails Nav: Open Related File"
       },
       {
         "command": "rails-navigation.goToFile",
-        "title": "Go to cursored file"
+        "title": "Rails Nav: Go to cursored file"
       }
     ]
   },
