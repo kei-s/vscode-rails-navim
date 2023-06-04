@@ -8,7 +8,7 @@ export async function goToFile() {
         const { workspaceRoot, editor, document, relativePath } = getEditorInfo();
         const lineText = document.lineAt(editor.selection.active.line).text;
         if (relativePath.match(/^app\/views/)) {
-            const match = lineText.match(/render\s+['"](.+)['"]/);
+            const match = lineText.match(/render\s+['"]([^'"]+)['"]/);
             if (match) {
                 const renderTarget = match[1];
                 const candidate = path.join(
