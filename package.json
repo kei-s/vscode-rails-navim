@@ -2,7 +2,7 @@
   "name": "rails-navim",
   "displayName": "Rails NaVim",
   "description": "Rails file navigation like vim-rails",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "kei-s",
   "repository": {
     "type": "git",
